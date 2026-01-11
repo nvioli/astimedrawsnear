@@ -4,7 +4,7 @@ import { initAudio, changeTrack, doPlay, doPause } from "./audio.vue"
 
 const props = defineProps(['isPlaying'])
 const emit = defineEmits(['changeTrack'])
-const sectionRefs = Array.from({ length: 10 }, (_, k) => useTemplateRef(`section-${k}`));
+const sectionRefs = Array.from({ length: 11 }, (_, k) => useTemplateRef(`section-${k}`));
 
 // this logic looks backwards but it doesn't work the other way. maybe the value is a render behind? idk
 watch(() => props.isPlaying, (isPlaying) => { isPlaying ? doPlay() : doPause() })
@@ -41,7 +41,6 @@ onMounted(() => {
 </script>
 
 <template>
-
       <br />&nbsp;<br />&nbsp;<br />
       Oh there your name I's wrote, my dear,<br />
       Believe me what I say,<br />
@@ -104,7 +103,7 @@ onMounted(() => {
             Deadly Force Is Authorized Beyond This Point.” Then he quietly passed into the backcountry.</p>
       <p>This section of road was especially rough, never having been modernized, and Lewis had to take his time
             navigating around the large stones scattered across his path as the trike slowly crawled up the
-            mountain. Lewis and Holly had spent countless afternoons exploring these olds neighborhoods over the
+            mountain. Lewis and Holly had spent countless afternoons exploring these old neighborhoods over the
             years, occasionally coming across a stray stone foundation, or a creeping vine of English ivy among
             the wildwood, remnants of its prior homeliness. A few rotting fence posts with loose hanging wire,
             dangling in the morning breeze, were mostly all that remained now.</p>
@@ -119,7 +118,7 @@ onMounted(() => {
             probably because they didn’t taste like much, but Lewis actually enjoyed the chalky oat sized flakes
             embedded throughout the small bar. Somewhere a few hundred feet away he heard the rapid knocking of a
             woodpecker on a dead tree, sounding huge in its hollowness, and after he packed away the last bits of
-            trash from his breakfast, Lewis engaged the trikes throttle and turned left onto the fire road.</p>
+            trash from his breakfast, Lewis engaged the trike's throttle and turned left onto the fire road.</p>
       <p>This section of road was better maintained, and Lewis could see fresh tire tracks clearly embedded in the
             hard dried mud. He’d never seen anyone riding along here but knew it to be the main road that went
             from the bottom of mountain up towards Skyline Drive. About a year after the flu started is when they
@@ -302,9 +301,8 @@ onMounted(() => {
       </p>
       <p>“I’m going to get the bags ready,” he said as he ran downstairs. They had been through this before,
             several times in fact, once even loading up the car just in case. According to their neighbors, the
-            flooding in 1995 had washed out the area</p>
-      <p>beneath their building, but the water had only ever made its way into the state road once in the ten
-            years they’d lived out there.</p>
+            flooding in 1995 had washed out the area beneath their building, but the water had only ever made its way
+            into the state road once in the ten years they’d lived out there.</p>
       <p>Lewis flicked on the hall light and grabbed for the knob to open the closet door. He tore through the
             first layer of junk by throwing some winter jackets and a heavy quilted blanket into the hall,
             revealing a neat stack of three backpacks. One was just full of clothes, old stuff they didn’t wear a
@@ -976,7 +974,7 @@ onMounted(() => {
             mixing the dough with his hands when they arrived. That night they sat around the heater, watching the
             older folks mend clothing and tell stories about their lives before they moved up on the mountain. One
             of the elderly women, Nancy, was telling the children about the plants that used to grow along the
-            ocean where she was from while the radio played a country station from somewhere in Valley.</p>
+            ocean where she was from while the radio played a country station from somewhere in the Valley.</p>
       <p>There was a brief unsettling moment when one of the children tried to grab Bernie and walk with him under
             his arm, only to receive the hard whap of Bernie’s claw across his left cheek. The child immediately
             began to sob and ran for the comfort of the older women. Neil calmy walked over the kitchen bench, got
