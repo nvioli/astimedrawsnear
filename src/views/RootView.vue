@@ -52,8 +52,8 @@ const changeTrack = (newTrack: string) => { currentTrack.value = newTrack }
           This story and soundtrack is designed to be read at the speed if you were reading the text aloud,
           as each new track follows along with the major movements of the story, though the piece can be enjoyed in
           any way the reader/listener would like to experience it. I’m offering this story and audio for free,
-          but if you enjoy the work I really encourage buying the PDF/MP3 at Bandcamp, or a donation to my
-          Patreon, or PayPal (danilbachman@gmail.com).
+          but if you enjoy the work I would really like to encourage you to donate anything you can to
+          https://www.dcmigrantmutualaid.org/ and email me at (danilbachman@gmail.com).
           <br />&nbsp;<br />
           Please make sure your sound is on (ideally with headphones). Hope you enjoy it.
         </div>

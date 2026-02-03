@@ -81,12 +81,12 @@ onMounted(() => {
             cart he had loaded the night before. This time it was mostly shelf stable food items: beans, instant
             potatoes, some cans of tomatoes and processed soy loaf. There were also two five-gallon gas canisters
             with homemade alcohol, water filters, some new reflector panels for a solar oven, and of course, one
-            flat tan envelope of cash for the exchange tucked securely underneath the cargo. <span
-                  ref="section-1"></span>He had tied them all down and put the tarp over top the night before,
-            just like he always did, and took a moment to check over his work one last time, sipping the piping
-            hot liquid from his thermos and taking a long pull off his vape as the trike’s battery fans whirred in
-            harmony.</p>
+            flat tan envelope of cash for the exchange tucked securely underneath the cargo. He had tied them all down
+            and put the tarp over top the night before, just like he always did, and took a moment to check over his
+            work one last time, sipping the piping hot liquid from his thermos and taking a long pull off his vape as
+            the trike’s battery fans whirred in harmony.</p>
       <img src="/images/2.jpg" />
+      <span ref="section-1"></span>
       <p>It was the first six miles on the state road that always made him the most nervous. The only time he ever
             got caught by the police they hit him so hard in the stomach he almost passed out. They took the weed
             with them too. It was worth way more than whatever they got paid trying to take his ass downtown to a
@@ -246,10 +246,11 @@ onMounted(() => {
             moving around the kitchen. She came into the bedroom, “Hey I thought I heard you get up . . . the
             water’s doing that thing again, do you mind?” Lewis didn’t say anything and gave her a kiss on the
             forehead then got his pants on. He walked out back to the well room and immediately saw the problem.
-            Thick clumps of reddish mud and clay were caked into the folds of their water filtration system. <span
-                  ref="section-2"></span>This had been happening more and more lately as their pump sucked from
+            Thick clumps of reddish mud and clay were caked into the folds of their water filtration system.
+            <span ref="section-2"></span>This had been happening more and more lately as their pump sucked from
             the bottom of their well. It was feast or famine with rain these days, and even a steady inundation of
-            four or five inches didn’t seem to recharge their system like it used to.</p>
+            four or five inches didn’t seem to recharge their system like it used to.
+      </p>
       <p>Lewis blasted the muck off of the filter with rainwater from their 550-gallon black plastic cistern with
             the help of a small pressurizing attachment that fit on the end of a drill. That’s when he noticed the
             color of the sky. It was a steady gray dappled with a lighter colored blanket of fast-moving white
@@ -478,8 +479,7 @@ onMounted(() => {
             remaining comforts from before. Lewis left Holly to finish the first round of cleaning on her own
             while he hiked up and down the hill several times to grab Bernie and their bags.</p>
       <p>They slept that night in huge a pile of their clothing and scattered bedroom belongings in short anxious
-            bursts of between their waking life and dreamtime, with Bernie purring in between them all night long.
-      </p>
+            bursts of between their waking life and dreamtime, with Bernie purring in between them all night long.</p>
       <p>Sometime that next morning is when they both noticed the swelling and pain around their ankles. The mud
             they had been stomping around in was causing a serious rash and some minor skin flaking that was
             painful to the touch. Bernie seemed to be licking his paws more than usual as well, as he too had been
@@ -525,7 +525,7 @@ onMounted(() => {
       <p>“Are you hungry Sir? We have some food if you’re hungry.” The man took in the information slowly, then
             looked up at Holly. “Yes . . . God bless you. Thank you, God bless you.” Lewis stayed with the man
             while Holly put together a small plastic grocery bag with some canned corn, several protein bars, and
-            a little baggy of dried fruit and nuts.<span ref="section-5"></span> It wasn’t much but it might help
+            a little baggy of dried fruit and nuts. It wasn’t much but it might help
             him on his journey.</p>
       <p>The sun was going down now, and it was beginning to get dark outside. The man took the small sack from
             Holly and held it loosely in his right hand, dangling it just above the ground. “God bless you.” He
@@ -546,6 +546,7 @@ onMounted(() => {
             their time with short walks around the neighborhood, collecting food and anything salvageable from the
             destroyed homes, and resting as much as possible.</p>
       <img src="/images/8.jpg" />
+      <span ref="section-5"></span>
       <p>It was on the eighteenth day that they awoke to the heavy thumping of a helicopter. Lewis threw on his
             clothes and ran down the stairs, out the open doorway into the street. Hovering in the air near the
             old bridge site was a huge military helicopter, the kind with four horizontal blades. Dangling below
@@ -555,7 +556,7 @@ onMounted(() => {
             the short crow’s nest on top.</p>
       <p>The helicopter set the machine down on their side of the river and almost immediately engaged, throwing a
             huge plume of black smoke out of its vertical exhaust. Lewis watched as it pushed the trees and rubble
-            aside, only having to back up and reposition every now and then.<span ref="section-6"></span> It moved
+            aside, only having to back up and reposition every now and then. It moved
             the huge sycamore and cottonwood trees that used to line the riverbanks and pushed the truck their
             neighbor had drowned in about twenty feet towards the river. It moved the broken pieces of blacktop
             with ease.</p>
@@ -581,6 +582,7 @@ onMounted(() => {
             the contraption down to the ground. The whole thing took only about a half an hour, with the
             helicopter flying away back towards the city, and the men in the truck going back down the road from
             which they had arrived.</p>
+      <span ref="section-6"></span>
       <p>The only other traffic that week was a small convoy consisting of four vehicles. It was just before the
             light started to get long, late afternoon in early winter, when the sun sets behind the mountains but
             still leaves the sky bright enough to see outside.</p>
@@ -604,7 +606,7 @@ onMounted(() => {
             pocket. The catch was that you worked for them, and Lewis didn’t believe the jobs would be quite as
             easy as hauling a couple backpacks of weed off the mountain every other week. This was all assuming
             that everything going on over there was fine, when in fact they had no idea what was happening outside
-            their little area.<span ref="section-7"></span> The camps, however, if anyone managed to survive the
+            their little area. The camps, however, if anyone managed to survive the
             storm, would at least know Lewis as the delivery guy, and couldn’t possibly be that far off from the
             river.</p>
       <p>That evening while lying in bed Holly found a signal on the emergency radio; it was a looping message
@@ -622,6 +624,7 @@ onMounted(() => {
             some old scraps of black trash bags and shredded insulation.</p>
       <p>So with Bernie strapped to top of Lewis’s bag, and their packs loaded with as much as they could carry,
             Lewis and Holly made their way down the new road towards the mountains.</p>
+      <span ref="section-7"></span>
       <img src="/images/9.jpg" />
       <p>The new road was much easier to navigate since it had been plowed and driven over several times, now
             working its way deeper into some of the fields, avoiding the tangled messes scattered around them on
@@ -775,7 +778,7 @@ onMounted(() => {
             They shared their last can of soy loaf and slept through the night, waking just about dawn to the
             sound of someone walking through the woods towards them.</p>
       <p>Neil was around sixty years old. He wore a full white beard which was bound 5 times by rubber bands in
-            equal segments all the way down to the tip.<span ref="section-9"></span> His shoulder length hair was
+            equal segments all the way down to the tip. His shoulder length hair was
             tied in a knot on the back of his head, and he was dressed only in green coveralls and tattered
             leather boots. He stopped about fifty feet from the tent and confidentially gave out a short hollering
             sound followed by, “Hello . . . Holly, Lewis, my name is Neil, I heard you all might need some help.”
@@ -792,6 +795,7 @@ onMounted(() => {
             washing the last of their clothes and preparing as best they could, just in case they’d be leaving in
             the morning. Even Bernie could feel the emotional shift in the tent that night and lay awake all night
             watching over his companions.</p>
+      <span ref="section-9"></span>
       <p>The morning came and went with no sign of Neil or anyone else. Lewis even had time to filter more water
             and pack up their tent completely, stacking all their gear in a neat pile beneath one of the large
             sycamore trees near the camp. Finally, around midday, they heard Neil whistle from the top of the hill
@@ -1068,7 +1072,6 @@ onMounted(() => {
             women in our camp and we had to tell him and the others to leave. I knew they ran a tight ship up
             here, and I’m glad I’ve been able to help a little,” he laughed as he sat back into his chair, “though
             I’m not quite sure how I’m helping most of the time.”</p>
-      <span ref="section-10"></span>
       <p>One night a man from one of the allied camps about five miles away came to see how everyone was doing
             with medical supplies and food stores for the winter. He told the group that it looked like security
             was doing sweeps from the northeastern section of the property, already dismantling one of the largest
@@ -1082,6 +1085,7 @@ onMounted(() => {
             and cover yourself with whatever leaf litter you could, trying to obscure as much of your body heat as
             possible, remaining hidden until at least five minutes after the drone had passed.</p>
       <img src="/images/15.jpg" />
+      <span ref="section-10"></span>
       <p>The cold reaches of December finally moved into their section of the Shenandoah Blue Ridge in the days
             that followed. Even though it had been years since the valleys below them had seen much winter
             weather, snow still made its way into the mountains now and then, coming in short bursts of sleet, or
