@@ -4,7 +4,7 @@ import { ref } from "vue"
 const props = defineProps(['isPlaying', 'currentTrack'])
 const isMenuVisible = ref(false)
 const toggleMenuVisibility = () => {
-    console.log('toggling ismenuVisible');
+    console.debug('toggling ismenuVisible');
     isMenuVisible.value = !isMenuVisible.value
 }
 </script>

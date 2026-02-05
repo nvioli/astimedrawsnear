@@ -4,7 +4,7 @@ import Main from '../components/Main.vue'
 import Toolbar from '../components/Toolbar.vue'
 
 const hasClicked = ref(false)
-console.log('hasClicked', hasClicked.value)
+console.debug('hasClicked', hasClicked.value)
 const fontSize = ref(1.5)
 const margin = ref(7);
 const isPlaying = ref(true)

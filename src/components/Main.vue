@@ -4,6 +4,7 @@ import { initAudio, changeTrack, doPlay, doPause } from "./audio.vue"
 
 const props = defineProps(['isPlaying'])
 const emit = defineEmits(['changeTrack'])
+
 const sectionRefs = Array.from({ length: 11 }, (_, k) => useTemplateRef(`section-${k}`));
 
 // this logic looks backwards but it doesn't work the other way. maybe the value is a render behind? idk
@@ -22,12 +23,12 @@ function initObservers() {
 }
 
 function handleIntersect(entries) {
-      console.log('got intersect')
+      console.debug('got intersect')
       entries.forEach(entry => {
             if (entry.isIntersecting) {
                   const index = sectionRefs.findIndex(r => r.value === entry.target);
-                  console.log('is intersecting', index)
-                  changeTrack(index);
+                  console.debug('is intersecting', index)
+                  changeTrack(index, props.isPlaying);
             }
       });
 }
@@ -1201,7 +1202,8 @@ onMounted(() => {
             forth next to everyone. Three of the security agents went down the line of bodies and zip tied
             everyone’s hands together, then jerked them up to their knees and then onto their feet, tying the
             whole group together with a long plastic rope.</p>
-      <p>“Let’s go, let’s go, let’s go!” the captain cried. As soon as everyone was out of the rock shelter one of
+      <p style="margin-bottom: 50vh">“Let’s go, let’s go, let’s go!” the captain cried. As soon as everyone was out of
+            the rock shelter one of
             the men lit a large flare and tossed it through one of the holes in the wall. As the fire spread
             Bernie came running out of the entrance, taking a moment to look back, and then leapt deep into the
             forest. “This one can’t walk good,” said one of the men, gesturing at Nancy. “Fuck it. Leave her.” So

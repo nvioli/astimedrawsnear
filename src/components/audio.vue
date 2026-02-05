@@ -30,48 +30,16 @@ const titles = [
 
 const currentTrackIndex = ref(null);
 const isCrossfading = ref(false);
-
-export const doPlay = () => {
-      console.log('doplay')
-      audioFiles[currentTrackIndex.value].play()
-}
-export const doPause = () => {
-      console.log('dopause');
-      audioFiles[currentTrackIndex.value].pause()
-}
-
 let emitNewTrack;
-export function initAudio(changeVolume, emit) {
-      console.log('initAudio', changeVolume)
-      audioFiles.forEach(a => {
-            // a.loop = props.shouldLoop;
-            a.volume = 1;
-            // if (changeVolume) a.volume = 0;
-      });
-      emitNewTrack = emit;
-}
-export async function changeTrack(nextIndex) {
-      console.log('changing track', currentTrackIndex.value, nextIndex, isCrossfading.value)
-      if (nextIndex === currentTrackIndex.value || isCrossfading.value) return;
-      isCrossfading.value = true;
 
-      console.log('crossfading', currentTrackIndex.value, nextIndex)
-      emitNewTrack(titles[nextIndex])
-      await crossfade(currentTrackIndex.value, nextIndex);
-      currentTrackIndex.value = nextIndex;
-
-      isCrossfading.value = false;
-      console.log('done crossfading')
-}
-
-function crossfade(fromIndex, toIndex) {
-      console.log("crossfade called with", fromIndex, toIndex)
+function crossfade(fromIndex, toIndex, isPlaying) {
+      console.debug("crossfade called with", fromIndex, toIndex)
       return new Promise(resolve => {
             const from = audioFiles[fromIndex];
             const to = audioFiles[toIndex];
 
-            console.log('playing ', to)
-            if (to.paused) to.play();
+            console.debug('playing ', to)
+            if (to.paused && isPlaying) to.play();
             if (!from) {
                   to.volume = 1
                   resolve();
@@ -89,7 +57,7 @@ function crossfade(fromIndex, toIndex) {
                   to.volume = Math.min(1, ratio);
 
                   if (ratio >= 1) {
-                        console.log('pausing', from)
+                        console.debug('pausing', from)
                         clearInterval(interval);
                         from.pause();
                         resolve();
@@ -97,4 +65,38 @@ function crossfade(fromIndex, toIndex) {
             }, step);
       });
 }
+
+export const doPlay = () => {
+      console.debug('doplay')
+      audioFiles[currentTrackIndex.value].play()
+}
+export const doPause = () => {
+      console.debug('dopause');
+      audioFiles.map(af => af.pause())
+}
+
+export const initAudio = (changeVolume, emit) => {
+      console.debug('initAudio', changeVolume)
+      audioFiles.forEach(a => {
+            // a.loop = props.shouldLoop;
+            a.volume = 1;
+            // if (changeVolume) a.volume = 0;
+      });
+      emitNewTrack = emit;
+}
+
+export async function changeTrack(nextIndex, isPlaying) {
+      console.debug('changing track', currentTrackIndex.value, nextIndex, isCrossfading.value)
+      if (nextIndex === currentTrackIndex.value || isCrossfading.value) return;
+      isCrossfading.value = true;
+
+      emitNewTrack(titles[nextIndex])
+      console.debug('crossfading', currentTrackIndex.value, nextIndex)
+      await crossfade(currentTrackIndex.value, nextIndex, isPlaying);
+      currentTrackIndex.value = nextIndex;
+
+      isCrossfading.value = false;
+      console.debug('done crossfading')
+}
+
 </script>
