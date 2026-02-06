@@ -43,19 +43,24 @@ const changeTrack = (newTrack: string) => { currentTrack.value = newTrack }
       </div>
       <div v-if="hasClicked">
         <div class="intro margins" :style="{ paddingLeft: margin + 'rem', paddingRight: margin + 'rem' }">
-          As Time Draws Near is a short story and accompanying soundtrack that follows a rural community in the
-          Shenandoah Blue Ridge of Virginia after a powerful hurricane devastates the area. This piece of speculative
-          climate fiction explores the potential near-term impacts of climate breakdown on the region, as well as an
-          accelerating military dictatorship driven by brutalizing unchecked corporate greed and eugenic
-          pseudoscience.
-          <br />&nbsp;<br />
-          This story and soundtrack is designed to be read at the speed if you were reading the text aloud,
-          as each new track follows along with the major movements of the story, though the piece can be enjoyed in
-          any way the reader/listener would like to experience it. I’m offering this story and audio for free,
-          but if you enjoy the work I would really like to encourage you to donate anything you can to
-          https://www.dcmigrantmutualaid.org/ and email me at (danilbachman@gmail.com).
-          <br />&nbsp;<br />
-          Please make sure your sound is on (ideally with headphones). Hope you enjoy it.
+          <div>
+            As Time Draws Near is a short story and accompanying soundtrack that follows a rural community in the
+            Shenandoah Blue Ridge of Virginia after a powerful hurricane devastates the area. This piece of speculative
+            climate fiction explores the potential near-term impacts of climate breakdown on the region, as well as an
+            accelerating military dictatorship driven by brutalizing unchecked corporate greed and eugenic
+            pseudoscience.
+            <br />&nbsp;<br />
+            This story and soundtrack is designed to be read at the speed if you were reading the text aloud,
+            as each new track follows along with the major movements of the story, though the piece can be enjoyed in
+            any way the reader/listener would like to experience it. I’m offering this story and audio for free,
+            but if you enjoy the work I would really like to encourage you to donate anything you can to
+            <a href="https://www.dcmigrantmutualaid.org/" target=" _blank">Migrant Solidarity Mutual Aid</a> and email
+            me
+            at <a href="mailto:danilbachman@gmail.com">danilbachman@gmail.com</a>.
+
+            <br />&nbsp;<br />
+            Please make sure your sound is on (ideally with headphones). Hope you enjoy it.
+          </div>
         </div>
         <div class="intro margins" :style="{ paddingLeft: margin + 'rem', paddingRight: margin + 'rem' }">
           <img src="/images/0.jpg" />

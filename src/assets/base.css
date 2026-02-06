@@ -2,6 +2,8 @@
   --white: #f2f0ef;
   --black: #221c1b;
   --gray: #8A8685;
+  --link-light: #6977C5;
+  --link-dark: #7A83B4;
 }
 
 /* semantic color variables for this project */
@@ -9,11 +11,18 @@
   --color-background: var(--white);
   --color-text: var(--black);
 }
+a {
+  color: var(--link-light);
+  text-decoration: none;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: var(--black);
     --color-text: var(--white);
+  }
+  a {
+    color: var(--link-dark);
   }
 }
 
