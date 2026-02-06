@@ -54,9 +54,10 @@ const changeTrack = (newTrack: string) => { currentTrack.value = newTrack }
             as each new track follows along with the major movements of the story, though the piece can be enjoyed in
             any way the reader/listener would like to experience it. I’m offering this story and audio for free,
             but if you enjoy the work I would really like to encourage you to donate anything you can to
-            <a href="https://www.dcmigrantmutualaid.org/" target=" _blank">Migrant Solidarity Mutual Aid</a> and email
-            me
-            at <a href="mailto:danilbachman@gmail.com">danilbachman@gmail.com</a>.
+            <br />
+            <a href="https://www.dcmigrantmutualaid.org/" target=" _blank">Migrant Solidarity Mutual Aid</a>
+            <br />
+            and email me at <a href="mailto:danilbachman@gmail.com">danilbachman@gmail.com</a>.
 
             <br />&nbsp;<br />
             Please make sure your sound is on (ideally with headphones). Hope you enjoy it.
