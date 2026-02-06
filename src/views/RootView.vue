@@ -4,6 +4,10 @@ import Main from '../components/Main.vue'
 import Toolbar from '../components/Toolbar.vue'
 
 const hasClicked = ref(false)
+const deviceSupportsTap = 'ontouchstart' in window ||
+  (window.DocumentTouch && document instanceof window.DocumentTouch) ||
+  navigator.maxTouchPoints > 0 ||
+  window.navigator.msMaxTouchPoints > 0
 console.debug('hasClicked', hasClicked.value)
 const fontSize = ref(1.5)
 const margin = ref(7);
@@ -33,8 +37,11 @@ const changeTrack = (newTrack: string) => { currentTrack.value = newTrack }
           <div style="font-size: 1.25rem">Website by Nick Violi</div>
 
           <br />&nbsp;<br />
-          <div v-if="!hasClicked">
+          <div v-if="!hasClicked && !deviceSupportsTap">
             Click to begin, then scroll to continue.
+          </div>
+          <div v-if="!hasClicked && deviceSupportsTap">
+            Tap to begin, then scroll to continue.
           </div>
           <div v-if="hasClicked">
             Scroll to continue.
