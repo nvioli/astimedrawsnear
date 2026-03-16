@@ -1,5 +1,5 @@
 <script setup>
-import { useTemplateRef, onMounted, defineProps, defineEmits, watch } from "vue";
+import { useTemplateRef, onMounted, onUnmounted, defineProps, defineEmits, watch } from "vue";
 import { initAudio, changeTrack, doPlay, doPause } from "./audio.vue"
 
 const props = defineProps(['isPlaying'])
@@ -10,6 +10,31 @@ const sectionRefs = Array.from({ length: 11 }, (_, k) => useTemplateRef(`section
 // this logic looks backwards but it doesn't work the other way. maybe the value is a render behind? idk
 watch(() => props.isPlaying, (isPlaying) => { isPlaying ? doPlay() : doPause() })
 let observer = null;
+let currentSectionIndex = -1;
+let isRestoring = false;
+let rafId = null;
+
+function getProgress() {
+      const match = document.cookie.match(/atdn_progress=([^;]+)/);
+      if (!match) return null;
+      const [sectionIndex, scrollY] = match[1].split(':').map(Number);
+      return { sectionIndex, scrollY };
+}
+
+function saveProgress(sectionIndex, scrollY) {
+      const expires = new Date();
+      expires.setFullYear(expires.getFullYear() + 1);
+      document.cookie = `atdn_progress=${sectionIndex}:${scrollY}; expires=${expires.toUTCString()}; path=/`;
+}
+
+function onScroll() {
+      if (currentSectionIndex < 0 || isRestoring) return;
+      if (rafId) return;
+      rafId = requestAnimationFrame(() => {
+            saveProgress(currentSectionIndex, Math.round(window.scrollY));
+            rafId = null;
+      });
+}
 
 function initObservers() {
       observer = new IntersectionObserver(handleIntersect, {
@@ -23,12 +48,15 @@ function initObservers() {
 }
 
 function handleIntersect(entries) {
+      if (isRestoring) return;
       console.debug('got intersect')
       entries.forEach(entry => {
             if (entry.isIntersecting) {
                   const index = sectionRefs.findIndex(r => r.value === entry.target);
                   console.debug('is intersecting', index)
                   changeTrack(index, props.isPlaying);
+                  currentSectionIndex = index;
+                  saveProgress(currentSectionIndex, Math.round(window.scrollY));
             }
       });
 }
@@ -37,7 +65,24 @@ onMounted(() => {
       setTimeout(() => {
             initAudio(true, (newTrack) => emit('changeTrack', newTrack));
             initObservers();
+
+            const saved = getProgress();
+            if (saved) {
+                  isRestoring = true;
+                  currentSectionIndex = saved.sectionIndex;
+                  window.scrollTo(0, saved.scrollY);
+                  changeTrack(saved.sectionIndex, props.isPlaying);
+                  setTimeout(() => { isRestoring = false; }, 100);
+            }
+
+            window.addEventListener('scroll', onScroll);
       }, 10)
+});
+
+onUnmounted(() => {
+      window.removeEventListener('scroll', onScroll);
+      if (observer) observer.disconnect();
+      if (rafId) cancelAnimationFrame(rafId);
 });
 </script>
 

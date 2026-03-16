@@ -8,6 +8,7 @@ const deviceSupportsTap = 'ontouchstart' in window ||
   (window.DocumentTouch && document instanceof window.DocumentTouch) ||
   navigator.maxTouchPoints > 0 ||
   window.navigator.msMaxTouchPoints > 0
+const hasProgress = document.cookie.includes('atdn_progress=')
 console.debug('hasClicked', hasClicked.value)
 const fontSize = ref(1.5)
 const margin = ref(7);
@@ -34,14 +35,14 @@ const changeTrack = (newTrack: string) => { currentTrack.value = newTrack }
           <br />&nbsp;<br />
           <div style="font-size: 1.25rem">Edited by Aldona Dye</div>
           <div style="font-size: 1.25rem">Layout and Design by Thomas-Mark Peterson</div>
-          <div style="font-size: 1.25rem">Website by Nick Violi</div>
+          <div style="font-size: 1.25rem">Website by <a href="https://nvioli.github.io" target="_blank">Nick Violi</a></div>
 
           <br />&nbsp;<br />
           <div v-if="!hasClicked && !deviceSupportsTap">
-            Click to begin, then scroll to continue.
+            {{ hasProgress ? 'Click to continue.' : 'Click to begin, then scroll to continue.' }}
           </div>
           <div v-if="!hasClicked && deviceSupportsTap">
-            Tap to begin, then scroll to continue.
+            {{ hasProgress ? 'Tap to continue.' : 'Tap to begin, then scroll to continue.' }}
           </div>
           <div v-if="hasClicked">
             Scroll to continue.
