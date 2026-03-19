@@ -70,9 +70,11 @@ onMounted(() => {
             if (saved) {
                   isRestoring = true;
                   currentSectionIndex = saved.sectionIndex;
-                  window.scrollTo(0, saved.scrollY);
                   changeTrack(saved.sectionIndex, props.isPlaying);
-                  setTimeout(() => { isRestoring = false; }, 100);
+                  setTimeout(() => {
+                        window.scrollTo({ top: saved.scrollY, behavior: 'smooth' });
+                        setTimeout(() => { isRestoring = false; }, 1000);
+                  }, 500);
             }
 
             window.addEventListener('scroll', onScroll);
