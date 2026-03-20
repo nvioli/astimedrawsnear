@@ -35,7 +35,7 @@ const changeTrack = (newTrack: string) => { currentTrack.value = newTrack }
           <br />&nbsp;<br />
           <div style="font-size: 1.25rem">Edited by Aldona Dye</div>
           <div style="font-size: 1.25rem">Layout and Design by Thomas-Mark Peterson</div>
-          <div style="font-size: 1.25rem">Website by <a href="https://nvioli.github.io" target="_blank">Nick Violi</a></div>
+          <div style="font-size: 1.25rem">Website by <a class="credit-link" href="https://nvioli.github.io" target="_blank">Nick Violi</a></div>
 
           <br />&nbsp;<br />
           <div v-if="!hasClicked && !deviceSupportsTap">
@@ -118,5 +118,10 @@ img {
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
   }
+}
+
+.credit-link {
+  color: inherit;
+  text-decoration: underline;
 }
 </style>
