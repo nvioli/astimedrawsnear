@@ -72,8 +72,18 @@ onMounted(() => {
                   currentSectionIndex = saved.sectionIndex;
                   changeTrack(saved.sectionIndex, props.isPlaying);
                   setTimeout(() => {
-                        window.scrollTo({ top: saved.scrollY, behavior: 'smooth' });
-                        setTimeout(() => { isRestoring = false; }, 1000);
+                        const start = window.scrollY;
+                        const end = saved.scrollY;
+                        const duration = 1000;
+                        const startTime = performance.now();
+                        function step(now) {
+                              const t = Math.min((now - startTime) / duration, 1);
+                              const eased = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+                              window.scrollTo(0, start + (end - start) * eased);
+                              if (t < 1) requestAnimationFrame(step);
+                              else setTimeout(() => { isRestoring = false; }, 100);
+                        }
+                        requestAnimationFrame(step);
                   }, 500);
             }
 

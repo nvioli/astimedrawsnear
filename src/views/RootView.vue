@@ -44,7 +44,7 @@ const changeTrack = (newTrack: string) => { currentTrack.value = newTrack }
           <div v-if="!hasClicked && deviceSupportsTap">
             {{ hasProgress ? 'Tap to continue.' : 'Tap to begin, then scroll to continue.' }}
           </div>
-          <div v-if="hasClicked">
+          <div v-if="hasClicked && !hasProgress">
             Scroll to continue.
           </div>
         </div>
